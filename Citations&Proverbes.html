@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Citations&Proverbes</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="site.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body bgcolor="#000000">
+	<section class="no-footer">
+	<header>
+		<a class="no-deco left underlined" href="#footer">A propos</a> 
+		<a class="no-deco center underlined" href="#">Citations<span class="logoP2">&Proverbes</span></a> 
+		<span class="menubar">
+			<a class="no-deco right underlined side"><i class="fa-solid fa-list"></i>  More</a>
+			<div class="drop-down-menu">
+				<ul class="menubar2">
+					<li class="side2"><a><i class="fas fa-chevron-left"></i>Biographies</a></li>
+						<div class="drop-down-menu2">
+							<ul>
+								<li><a href="Victor HUGO.html" class="no-deco no-deco-plus">Victor HUGO</a></li>
+								<li><a href="Nelson MANDELA.html" class="no-deco no-deco-plus">Nelson MANDELA</a></li>
+								<li><a href="Mohandas Karamchand GANDHI.html" class="no-deco no-deco-plus">Mohandas.K GANDHI</a></li>
+							</ul>
+						</div>
+					<li><a href="#footer" class="no-deco no-deco-plus">Contact</a></li>
+				</ul>
+			</div>
+		</span>   
+	</header>
+	<section id="front">
+		<div class="welcome-img under">
+			<div class="centered-text">
+				<h2 align="center">L'e&#769ducation est l'arme la plus puissante qu'on puisse utiliser pour changer le monde. <br>-Nelson Mandela</h2>
+			</div>
+		</div>
+	</section>
+	<span class="front-after">
+		<br><br><br><br><br><br><br>
+		<h1>Cliquez sur un thème de citations :</h1><br>
+		<hr color="white">
+		<div class="defilerBG">
+			<div class="defilercenter" id="bgdefiler">...............</div>
+			<section class="defiler">
+				<i class="sign signL fas fa-chevron-left" onclick="slideLeft()"></i>
+				<i class="sign signR fas fa-chevron-right" onmousedown="slideRight()"></i>
+				<div class="container">
+					<img src="" name="categories" class="defilerImg under">
+					<a href="" class="centered-text categ-text no-deco no-deco-plus" id="link"><h3 id="category"></h3></a>
+				</div>
+			</section>
+		</div>
+		<hr color="white">
+		<br><br>
+		<script>
+		T=['La Famille','L\'Education','Le Travail','La Technologie']
+
+		i=0;
+		document.getElementById("category").innerHTML=T[i]
+		document.images["categories"].src=T[i]+'.jpg'
+		document.getElementById("link").href=T[i]+'.html'
+		function slideRight()
+		{
+			const div=document.getElementById("bgdefiler");
+			div.className="defilercenter defilercenter1";
+			if(i<3) i++
+			else i=0
+			document.images["categories"].src=T[i]+".jpg";
+			document.getElementById("link").href=T[i]+'.html'
+			document.getElementById("category").innerHTML=T[i];
+		}
+		function slideLeft()
+		{
+			const div=document.getElementById("bgdefiler");
+			div.className="defilercenter defilercenter2";
+			if(i>0) i--
+			else i=3
+			document.images["categories"].src=T[i]+".jpg";
+			document.getElementById("link").href=T[i]+'.html'
+			document.getElementById("category").innerHTML=T[i];
+		}
+		</script>
+		<br><br><br><br><br>
+	</span>
+	</section>
+	<footer id="footer">
+		<div class="pose-footR">
+			<h4 class="foot">Contacts</h4>
+			<pre>Te&#769l : +212-682 95 83 71
+E-mail institustionnel : nisrine.benhajjou@gmail.com
+
+
+</pre>
+		</div>
+		<div class="pose-footL">
+			<h4 class="foot">A propos de moi</h4>
+			<pre>Je suis Nisrine BENHAJJOU.
+E&#769tudiante en FSR_UM5, en SMI S3.
+Ce site est mon projet en module de Technologie du Web.
+J'espe&#768re que mon travail vous plait.</pre>
+		</div>
+		
+	</footer>
+</body>
+
+</html>
